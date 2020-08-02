@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview/alert.dart';
 import 'package:webview/custom.dart';
 import 'package:webview/webpagepm.dart';
 import 'package:geolocator/geolocator.dart';
@@ -44,10 +45,67 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "WebView Demo",
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: Pre(),
     );
   }
 }
+
+
+class Pre extends StatefulWidget {
+  @override
+  _PreState createState() => _PreState();
+}
+
+class _PreState extends State<Pre> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flood Detection"),
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RaisedButton(
+                  child: Text("Location Based Prediction"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>Home()),
+                    );
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+//                splashColor: Colors.grey,
+                ),
+
+                RaisedButton(
+                  child: Text("Alert Based Prediction"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>Alert()),
+                    );
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+//                splashColor: Colors.grey,
+                )
+
+              ]
+          )
+      )
+      )
+
+
+    );
+  }
+}
+
+
+
 
 class Home extends StatefulWidget {
 
