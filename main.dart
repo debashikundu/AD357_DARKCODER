@@ -6,6 +6,8 @@ import 'package:geolocator/geolocator.dart';
 import 'dart:convert';
 import 'dart:core';
 
+import 'imagep1.dart';
+
 //String objText = '{"Latitude": f, "Longitude": g}';
 //String objText = '{f,g}';
 //User user = User.fromJson(jsonDecode(objText));
@@ -87,6 +89,19 @@ class _PreState extends State<Pre> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) =>Alert()),
+                    );
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+//                splashColor: Colors.grey,
+                ),
+
+                RaisedButton(
+                  child: Text("Send Image"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>UploadImageDemo()),
                     );
                   },
                   color: Colors.blue,
