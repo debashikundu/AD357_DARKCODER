@@ -17,7 +17,7 @@ class UploadImageDemo extends StatefulWidget {
 class UploadImageDemoState extends State<UploadImageDemo> {
   //
   static final String uploadEndPoint =
-      'https://arpanofficial.000webhostapp.com/';
+      'https://mirtest.herokuapp.com/';
   Future<File> file;
   String status = '';
   String base64Image;
